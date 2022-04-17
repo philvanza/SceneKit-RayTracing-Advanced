@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5nF-9r-2gc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="BMC-ei-YCq">
+            <objects>
+                <viewController id="5nF-9r-2gc" customClass="ViewController" customModule="SceneKit_RT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4SN-bf-OPh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </sceneKitView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W29-mD-AQd" userLabel="Blur View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ven-8L-kjw">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IRA-PQ-HJX">
+                                            <rect key="frame" x="0.0" y="0.0" width="174" height="768"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uM7-Cb-cVb">
+                                                <rect key="frame" x="0.0" y="0.0" width="174" height="768"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="regular"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5n5-kU-Fcq"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="W29-mD-AQd" firstAttribute="top" secondItem="4SN-bf-OPh" secondAttribute="top" id="3YE-a7-HDS"/>
+                            <constraint firstItem="W29-mD-AQd" firstAttribute="bottom" secondItem="4SN-bf-OPh" secondAttribute="bottom" id="75s-7k-Z7M"/>
+                            <constraint firstItem="W29-mD-AQd" firstAttribute="leading" secondItem="4SN-bf-OPh" secondAttribute="leading" id="uU7-uf-K8B"/>
+                            <constraint firstItem="W29-mD-AQd" firstAttribute="trailing" secondItem="4SN-bf-OPh" secondAttribute="trailing" id="wlV-NS-TMi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blurView" destination="W29-mD-AQd" id="6EE-wx-7nf"/>
+                        <outlet property="sceneView" destination="3se-qz-xqx" id="98R-1e-BXO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rSE-wy-NlO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="763"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="UV9-zk-cDt">
+            <objects>
+                <viewController storyboardIdentifier="RayTracer" id="Mth-vR-mad" customClass="GameViewController" customModule="SceneKit_RT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fXr-dB-GnE" customClass="MTKView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="m7Y-db-mVX"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cFK-DA-JHe" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799" y="763"/>
+        </scene>
+        <!--Advanced Game View Controller-->
+        <scene sceneID="XbJ-3P-E2M">
+            <objects>
+                <viewController storyboardIdentifier="AdvancedRayTracer" id="pYI-EX-gkx" userLabel="Advanced Game View Controller" customClass="AdvancedGameViewController" customModule="Blob_AR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dDN-AY-1Sc" customClass="MTKView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1NA-b0-t4e"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AW9-P4-qsw" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1433" y="763"/>
+        </scene>
+    </scenes>
+</document>
